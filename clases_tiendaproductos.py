@@ -22,7 +22,7 @@ class Producto:
         print(f"Precio: {self.precio}")
         print(f"Stock: {self.stock}")
 producto1 = Producto(nombre="Shampoo", 
-                     precio=45.000, 
+                     precio=45000, 
                      stock=5)
 producto1.mostrar()
 print("----------------")
