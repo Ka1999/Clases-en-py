@@ -58,8 +58,10 @@ libros.append(libro3)
 libros.append(libro4)
 libros.append(libro5)
 
+buscar = input("Ingrese el título del libro: ")
+
 for libro in libros:
-    if libro.titulo == "Frankenstein":
+    if libro.titulo == buscar:
         libro.show()
     
         
