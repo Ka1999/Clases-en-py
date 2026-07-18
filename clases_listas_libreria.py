@@ -60,9 +60,16 @@ libros.append(libro5)
 
 buscar = input("Ingrese el título del libro: ")
 
+encontrado = False
+
 for libro in libros:
     if libro.titulo == buscar:
         libro.show()
+        encontrado = True
+
+if not encontrado:
+    print("Libro no encontrado")
+
     
         
         
