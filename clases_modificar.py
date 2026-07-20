@@ -49,10 +49,17 @@ peliculas.append(pelicula3)
 
 eleccion = input("¿Qué pelicula quieres cambiar?")
 
+encontrado = False
+
 for i in peliculas:
     if i.titulo == eleccion:
         nueva_duracion = int(input("¿Cuál es la nueva duración? "))
         i.cambiar_duracion(nueva_duracion)
+        encontrado = True
+        break
+
+if not encontrado:
+        print("No existe esa pelicula")
 
 for pelicula in peliculas:
     pelicula.show()
