@@ -39,7 +39,7 @@ class Empresa:
                 empleado.show()
                 encontrado = True
                 break
-            if not encontrado:
+        if not encontrado:
                 print("No existe")
             
 empleado1 = Empleado(nombre= "Karen Vanessa González Alarcón",
