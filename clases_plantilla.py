@@ -42,13 +42,13 @@ class Veterinaria:
             print("Mascota no encontrada")
 
     def actualizar_mascota(self):
-        eleccion = input("¿Cuál es el nombre de la mascota que quieres cambiar? ")
+        eleccion = input("¿Cuál es el nombre de la mascota que quieres cambiar?: ")
         encontrado = False
 
         for i in self.mascotas:
             if i.nombre == eleccion:
-                nuevo_cambio = input("¿Cuál es la edad que quieres actualizar?: ")
-                i.edad == nuevo_cambio
+                nuevo_cambio = int(input("¿Cuál es la edad que quieres actualizar?: "))
+                i.edad = nuevo_cambio
                 encontrado = True
                 print("Cambio realizado")
                 break
@@ -56,5 +56,14 @@ class Veterinaria:
             print("Mascota no encontrada")       
 
     def eliminar_mascota(self):
-        eleccion = input("¿Cuál es el nombre de la mascota que quieres cambiar? ")
+        eleccion = input("¿Cuál es el nombre de la mascota que quieres eliminar?: ")
         encontrado = False
+
+        for i in self.mascotas:
+            if i.nombre == eleccion:
+                self.mascotas.remove(i)
+                encontrado = True
+                print("Mascota eliminada.")
+                break
+        if not encontrado:
+            print("Mascota no encontrada")
