@@ -67,3 +67,24 @@ class Veterinaria:
                 break
         if not encontrado:
             print("Mascota no encontrada")
+
+mascota1 = Mascota(nombre= "Sasha",
+                   especie= "Perro",
+                   edad= 5)
+
+mascota2 = Mascota(nombre= "Mijo",
+                   especie= "Perro",
+                   edad= 2)
+
+mascota3 = Mascota(nombre= "Pachita",
+                   especie= "Gato",
+                   edad= 1)
+
+veterinaria = Veterinaria()
+
+veterinaria.agregar_mascota(mascota1)
+veterinaria.agregar_mascota(mascota2)
+veterinaria.agregar_mascota(mascota3)
+veterinaria.eliminar_mascota(mascota1)
+veterinaria.actualizar_mascota(mascota3)
+veterinaria.buscar_mascota(mascota2)
